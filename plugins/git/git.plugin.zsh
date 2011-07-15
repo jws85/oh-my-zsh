@@ -15,9 +15,9 @@ alias gap='git add -p'
 compdef _git gap=git-add
 
 # committing
-alias gc='git commit -v'
+alias gc='git commit'
 compdef _git gc=git-commit
-alias gca='git commit -v -a'
+alias gca='git commit -a'
 compdef _git gca=git-commit
 
 # logging
