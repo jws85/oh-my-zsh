@@ -7,21 +7,25 @@
 
 # Some self-explanatory aliases
 alias afs='apt-file search --regexp'
-alias aps='aptitude search'
-alias apsrc='apt-get source'
-alias apv='apt-cache policy'
+alias as='aptitude search'
+alias asrc='apt-get source'
+alias av='apt-cache policy'
 
-alias apdg='su -c "aptitude update && aptitude safe-upgrade"'
-alias apud='su -c "aptitude update"'
-alias apug='su -c "aptitude safe-upgrade"'
+alias au='su -c "aptitude update && aptitude safe-upgrade"'
+alias aud='su -c "aptitude update"'
+alias aug='su -c "aptitude safe-upgrade"'
+alias ai="sudo aptitude install"
 
 # print all installed packages
 alias allpkgs='aptitude search -F "%p" --disable-columns ~i'
 
+# install a single .deb package
+alias di='sudo dpkg -i '
+
 # Install all .deb files in the current directory.
 # Warning: you will need to put the glob in single quotes if you use:
 # glob_subst
-alias di='su -c "dpkg -i ./*.deb"'
+alias dia='su -c "dpkg -i ./*.deb"'
 
 # Create a basic .deb package
 alias mydeb='time dpkg-buildpackage -rfakeroot -us -uc'
