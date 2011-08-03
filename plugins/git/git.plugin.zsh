@@ -53,6 +53,8 @@ gdv() { git-diff -w "$@" | view - }
 compdef _git gdv=git-diff
 alias gco='git checkout'
 compdef _git gco=git-checkout
+alias gcl='git clone'
+compdef _git gcl=git-clone
 alias gb='git branch'
 compdef _git gb=git-branch
 alias gba='git branch -a'
