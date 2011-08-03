@@ -6,7 +6,7 @@ export ZSH=$HOME/.oh-my-zsh
 export DISABLE_AUTO_TITLE="true"
 
 # Theme
-export ZSH_THEME="jws"
+export ZSH_THEME="tjkirch"
 
 # Plugins
 plugins=(git compleat debian taskwarrior)
