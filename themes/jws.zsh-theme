@@ -15,7 +15,7 @@ function prompt_char {
 	if [ $UID -eq 0 ]; then echo "$R#$X"; else echo $; fi
 }
 
-PROMPT='$G-> Executed at %* $R%(?, ,>>> Fail: $?)$X
+PROMPT='$G-> Finished at %* $R%(?, ,>>> Fail: $?)$X
 
 $R%n$X@$M%m$X: $C%~$X $(git_prompt_info)
 $G%_$X$PCOLOR$(prompt_char)$X '
