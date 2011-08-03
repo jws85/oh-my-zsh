@@ -8,7 +8,12 @@ X="%{$reset_color%}"
 
 ZSH_THEME_GIT_PROMPT_PREFIX="($B"
 ZSH_THEME_GIT_PROMPT_SUFFIX="$X)"
-ZSH_THEME_GIT_PROMPT_DIRTY=" $R⚡"
+if [[ $DEGRADE == 1 ]]; then
+	ZSH_THEME_GIT_PROMPT_DIRTY="$R*"
+else
+	ZSH_THEME_GIT_PROMPT_DIRTY="$R⚡"
+fi
+	
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 
 function prompt_char {
@@ -21,3 +26,5 @@ $R%n$X@$M%m$X: $C%~$X $(git_prompt_info)
 $G%_$X$PCOLOR$(prompt_char)$X '
 
 RPROMPT=''
+
+# vim: syntax=sh
