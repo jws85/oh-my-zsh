@@ -18,6 +18,6 @@ function prompt_char {
 PROMPT='$R%(?, ,FAIL: $?
 )$X
 $R%n$X@$M%m$X: $C%~$X $(git_prompt_info)
-$G%_$X$(prompt_char) '
+$G%_$X$PCOLOR$(prompt_char)$X '
 
 RPROMPT='$G%D{%H:%M}$X'

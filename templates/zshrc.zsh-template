@@ -5,11 +5,12 @@ export ZSH=$HOME/.oh-my-zsh
 # Turn off terminal autotitling
 export DISABLE_AUTO_TITLE="true"
 
-# Theme
-export ZSH_THEME="tjkirch"
+# Theme (the jws theme lets you set prompt color)
+export PCOLOR="%{$fg[blue]%}"
+export ZSH_THEME="jws"
 
 # Plugins
-plugins=(git compleat debian taskwarrior)
+plugins=(git github compleat debian taskwarrior)
 
 # Load oh-my-zsh
 source $ZSH/oh-my-zsh.sh
