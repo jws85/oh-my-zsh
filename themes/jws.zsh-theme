@@ -8,12 +8,7 @@ X="%{$reset_color%}"
 
 ZSH_THEME_GIT_PROMPT_PREFIX="($B"
 ZSH_THEME_GIT_PROMPT_SUFFIX="$X)"
-if [[ $DEGRADE == 1 ]]; then
-	ZSH_THEME_GIT_PROMPT_DIRTY="$R*"
-else
-	ZSH_THEME_GIT_PROMPT_DIRTY="$R⚡"
-fi
-	
+ZSH_THEME_GIT_PROMPT_DIRTY=" $R*"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 
 function prompt_char {
