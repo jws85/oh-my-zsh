@@ -37,6 +37,10 @@ alias glgg='git log --graph --max-count=5'
 compdef _git glgg=git-log
 
 # miscellaneous
+alias gd='git diff'
+compdef _git gd=git-diff
+alias gdc='git diff --cached'
+compdef _git gdc=git-diff
 alias gst='git status'
 compdef _git gst=git-status
 alias gpl='git pull'
