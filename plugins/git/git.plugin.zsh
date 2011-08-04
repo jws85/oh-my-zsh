@@ -49,6 +49,8 @@ alias gup='git fetch && git rebase'
 compdef _git gup=git-fetch
 alias gp='git push'
 compdef _git gp=git-push
+alias gpu='git push'
+compdef _git gpu=git-push
 gdv() { git-diff -w "$@" | view - }
 compdef _git gdv=git-diff
 alias gco='git checkout'
