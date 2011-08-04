@@ -35,6 +35,6 @@ $R%n$X@$M%m$X: $C%~$X $(git_prompt_info)
 $G%_$X$PCOLOR$(prompt_char)$X '
 
 # Haven't figured out anything interesting to do with this
-RPROMPT=''
+RPROMPT='!%{%B%F{cyan}%}%!%{%f%k%b%}'
 
 # vim: syntax=sh
