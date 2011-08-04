@@ -34,7 +34,7 @@ PROMPT='$G-> Finished at %* $R%(?, ,>>> Fail: $?)$X
 $R%n$X@$M%m$X: $C%~$X $(git_prompt_info)
 $G%_$X$PCOLOR$(prompt_char)$X '
 
-# Haven't figured out anything interesting to do with this
+# Show history number (ripped from the 'blinks' theme)
 RPROMPT='!%{%B%F{cyan}%}%!%{%f%k%b%}'
 
 # vim: syntax=sh
