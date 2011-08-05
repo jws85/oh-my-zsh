@@ -19,11 +19,11 @@ alias e=e.py
 #compdef _etm e=etm
 
 # busy times
-alias eb=e.py b
+alias eb='e.py b'
 #compdef _etm eb=etm
 
 # outline
-alias eo=e.py o
+alias eo='e.py o'
 #compdef _etm eo=etm
 
 # GUI
