@@ -23,7 +23,7 @@ export PATH=~/bin:$PATH
 unsetopt correct_all
 
 # So perl programs that use the local module stop complaining
-export LC_ALL=en_US.ISO8859-1
+export LC_ALL=en_US.UTF-8
 
 # Local changes
 source ~/.zsh_local
