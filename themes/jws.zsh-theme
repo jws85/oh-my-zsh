@@ -23,6 +23,20 @@ ZSH_THEME_GIT_PROMPT_SUFFIX="$X)"
 ZSH_THEME_GIT_PROMPT_DIRTY=" $R*"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 
+# n.b.: from http://zanshin.net/2011/08/12/oh-my-zsh/
+# Git sometimes goes into a detached head state. git_prompt_info doesn't
+# return anything in this case. So wrap it in another function and check
+# for an empty string.
+function check_git_prompt_info() {
+    if git rev-parse --git-dir > /dev/null 2>&1; then
+        if [[ -z $(git_prompt_info) ]]; then
+            echo "(%{$M%}detached$X)"
+        else
+            echo "$(git_prompt_info)"
+        fi
+    fi
+}
+
 # Which character to display for the prompt
 function prompt_char {
 	if [ $UID -eq 0 ]; then echo "$R#$X"; else echo $; fi
@@ -31,7 +45,7 @@ function prompt_char {
 # The prompt itself.  Top line displays "with the previous command's output"
 PROMPT='$G-> Finished at %* $R%(?, ,>>> Fail: $?)$X
 
-$R%n$X@$M%m$X: $C%~$X $(git_prompt_info)
+$R%n$X@$M%m$X: $C%~$X $(check_git_prompt_info)
 $G%_$X$PCOLOR$(prompt_char)$X '
 
 # Show history number (ripped from the 'blinks' theme)
