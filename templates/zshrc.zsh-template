@@ -4,7 +4,7 @@ export ZSH=$HOME/.oh-my-zsh
 
 # Uncomment following line if you want to disable red dots displayed
 # while waiting for completion
-#DISABLE_COMPLETION_WAITING_DOTS="true"
+#COMPLETION_WAITING_DOTS="true"
 
 # Turn off terminal autotitling
 export DISABLE_AUTO_TITLE="true"
